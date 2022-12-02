@@ -21,24 +21,10 @@ void loop() {
      * Quanto maior a incidência de luz menor a resistência do sensor
      */
     if(ldr_read > 750){
-      Serial.print(ldr_read);
-      Serial.print(" Vout: ");
-      Serial.print(vout);
-      Serial.print(" R_ldr: ");
-      Serial.print(res_ldr);
-      Serial.print(" Lux: ");
-      Serial.print(lux);
-      Serial.println(" Claro");
+      Serial.println(lux);
     }
     else{
-      Serial.print(ldr_read);
-      Serial.print(" Vout: ");
-      Serial.print(vout); //imprime na tela a tensão de saída
-      Serial.print(" R_ldr: ");
-      Serial.print(res_ldr); //imprime na tela a resistência do ldr
-      Serial.print(" Lux: ");
-      Serial.print(lux); //imprime na tela o valor de lux
-      Serial.println(" Escuro");
+      Serial.println(lux); 
     }
   }
   delay(2000);
